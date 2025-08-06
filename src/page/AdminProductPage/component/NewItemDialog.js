@@ -90,6 +90,7 @@ const NewItemDialog = ({ mode, showDialog, setShowDialog }) => {
   const addStock = () => {
     //재고타입 추가시 배열에 새 배열 추가
     setStock([...stock, []]);
+    setStockError(false);
   };
 
   const deleteStock = (idx) => {
@@ -110,6 +111,7 @@ const NewItemDialog = ({ mode, showDialog, setShowDialog }) => {
     const newStock = [...stock];
     newStock[index][1] = value;
     setStock(newStock);
+    setStockError(false);
   };
 
   const onHandleCategory = (event) => {
